@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchPosts } from "../actions";
+import { fetchPosts, fetchUser } from "../actions";
 
 class PostList extends React.Component {
   componentDidMount() {
@@ -23,11 +23,7 @@ class PostList extends React.Component {
     });
   }
   render() {
-    return (
-      <div className="ui relaxed divided list">
-        {this.renderList(this.props)}
-      </div>
-    );
+    return <div className="ui relaxed divided list">{this.renderList()}</div>;
   }
 }
 
